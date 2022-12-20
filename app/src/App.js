@@ -6,7 +6,6 @@ function App() {
   return (
     <>
     <LandingPage/>
-    <p>Hello!</p>
     </>
   );
 }

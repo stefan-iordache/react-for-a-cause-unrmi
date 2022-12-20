@@ -1,39 +1,49 @@
-import React, {useRef} from 'react'
+import React, { useState } from 'react'
+import image10 from "./imgs/ateneu.jpg"
+import image11 from "./imgs/mincu.jpeg"
+import image12 from "./imgs/palat.jpg"
+import "../App.css"
+
 
 function LandingPage() {
-    let id = 0
-    let backgrounds = [`url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Cetatea_de_Scaun_a_Sucevei_la_ceas_de_seara.jpg/2560px-Cetatea_de_Scaun_a_Sucevei_la_ceas_de_seara.jpg)`
-    ,`url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Ateneo_Rumano%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_73.jpg/1920px-Ateneo_Rumano%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_73.jpg')`
-    ,`url('https://upload.wikimedia.org/wikipedia/commons/b/be/Pelisor_Castle%2C_Sinaia.jpg')`]
-    
-    let backgroundDiv = useRef()
+    const [index, setIndex] = useState(0)
 
-    let background = {
-        backgroundImage:`${backgrounds[id]}`,
-        width: '100vw',
-        height: '100vh'
+    const imageClass = (currentIndex, globalIndex) => 
+    (currentIndex === globalIndex ? "active" : null)
 
-    }
-    
-    let landingPageContainer = {
-        objectFit: 'cover',
-        height :'100%',
-        position: 'relative',
-    }
+    const images = [
+        {
+            src: image10,
+            className: imageClass(0, index),
+            alt: "Ateneul Roman"
+        },
+        {
+            src: image11,
+            className: imageClass(1, index),
+            alt: "Institutul Ion Mincu"
+        },
+        {
+            src: image12,
+            className: imageClass(2, index),
+            alt: "Palatul Culturii din Ploiesti"
+        }
+    ]
 
-    function backgroundChange() {
-        id++
-        id = id % backgrounds.length
-        //backgroundDiv.backgroundImage = `${backgrounds[id]}`
-    }
-    
-    //setInterval(backgroundChange, 2000)
+    setTimeout(() => {
+        setIndex((index + 1) % images.length)
+    }, 2000)
 
     return (
-        <div style={landingPageContainer}>
-            <div ref={backgroundDiv} style={background}>
+        <>
+            <div className='slider'>
+                aaaa
+                {
+                    images.map((img, idx) => (
+                        <img key={idx} src={img.src} className={img.className} alt={img.alt} />
+                    ))
+                }
             </div>
-        </div>
+        </>
     )
 }
    
