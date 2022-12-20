@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import image10 from "./imgs/ateneu.jpg"
-import image11 from "./imgs/mincu.jpeg"
+import image11 from "./imgs/pelisor.jpg"
 import image12 from "./imgs/palat.jpg"
-import "../App.css"
 
 
 function LandingPage() {
@@ -35,13 +34,17 @@ function LandingPage() {
 
     return (
         <>
-            <div className='slider'>
-                aaaa
-                {
-                    images.map((img, idx) => (
-                        <img key={idx} src={img.src} className={img.className} alt={img.alt} />
-                    ))
-                }
+            <div id='home' className='slider'>    
+                <div>
+                    {
+                        images.map((img, idx) => (
+                            <img key={idx} src={img.src} className={img.className} alt={img.alt} />
+                        ))
+                    }
+                </div>
+                <div className='text-on-image'>
+                    <p>Hello</p>
+                </div>
             </div>
         </>
     )
