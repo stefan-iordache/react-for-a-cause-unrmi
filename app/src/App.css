@@ -61,6 +61,8 @@ button {
   }
   
   #home {
+    height: 100vh;
+
     background-color: #ddd;
   }
   
