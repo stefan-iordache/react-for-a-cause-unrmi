@@ -35,16 +35,11 @@ function LandingPage() {
     return (
         <>
             <div id='home' className='slider'>    
-                <div>
-                    {
-                        images.map((img, idx) => (
-                            <img key={idx} src={img.src} className={img.className} alt={img.alt} />
-                        ))
-                    }
-                </div>
-                <div className='text-on-image'>
-                    <p>Hello</p>
-                </div>
+                {
+                    images.map((img, idx) => (
+                        <img key={idx} src={img.src} className={img.className} alt={img.alt} />
+                    ))
+                }
             </div>
         </>
     )

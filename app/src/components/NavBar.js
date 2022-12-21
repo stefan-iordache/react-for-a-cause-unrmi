@@ -7,8 +7,8 @@ export default function NavBar() {
             <nav id='nav'>
                 <div className='nav left'>
                     <span className='gradient skew'>
-                        <h1 className='logo un-skew'>
-                            <Link to='home' spy={true} smooth={true} offset={0} duration={500}>Logo</Link>
+                        <h1 className='title un-skew'>
+                            Uniunea Naţională a Restauratorilor de Monumente Istorice
                         </h1>   
                     </span>
                     <button id='menu' className='btn-nav'>

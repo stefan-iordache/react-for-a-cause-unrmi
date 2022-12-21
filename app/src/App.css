@@ -14,14 +14,6 @@ img.active {
     animation: fadein 500ms forwards;
 }
 
-.text-on-image {
-    position: absolute;
-    color: red;
-    right: 50%;
-    left: 50%;
-    top:15%
-}
-
 @keyframes fadein {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -63,27 +55,27 @@ button {
   #home {
     height: 100vh;
 
-    background-color: #ddd;
+    background-color: #1c1c1c;
   }
   
   #about {
     height: 100vh;
-    background-color: #aaa;
+    background-color: #1c1c1c;
   }
   
   #donate {
     height: 100vh;
-    background-color: #888;
+    background-color: #1c1c1c;
   }
   
   #contact {
     height: 100vh;
-    background-color: #666;
+    background-color: azure;
   }
  
   #footer {
     height: 100vh;
-    background-color: #444;
+    background-color: #1c1c1c;
   }
   
   /*-------------Helpers-------------*/
@@ -114,6 +106,7 @@ button {
     font-family: "Saira Semi Condensed", sans-serif;
     height: 4em;
     overflow: hidden;
+    user-select: none;
   }
   #nav.nav-visible {
     height: 100%;
@@ -133,9 +126,9 @@ button {
   }
   
   span.gradient {
-    background: #f857a8;
-    background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
-    background: linear-gradient(45deg, #f857a8, #ff5858);
+    background: #990000;
+    background: -webkit-linear-gradient(33deg, #990000, #cd0000);
+    background: linear-gradient(33deg, #990000, #cd0000);
     padding: 0 1em;
     position: relative;
     right: 1em;
@@ -168,7 +161,7 @@ button {
   
   a:link, a:visited, a:active {
     text-decoration: none;
-    color: #f857a8;
+    color: #990000;
   }
   
   a:hover {
@@ -182,7 +175,7 @@ button {
   }
   
   .btn-nav {
-    color: #f857a8;
+    color: #990000;
     padding-left: 2em;
     padding-right: 2em;
   }
@@ -215,9 +208,9 @@ button {
     }
   
     .nav a:link.active, a:visited.active, a:active.active {
-      background: #f857a8;
-      background: -webkit-linear-gradient(45deg, #f857a8, #ff5858);
-      background: linear-gradient(45deg, #f857a8, #ff5858);
+      background: #990000;
+      background: -webkit-linear-gradient(45deg, #990000, #cd0000);
+      background: linear-gradient(45deg, #990000, #cd0000);
       color: #fff;
     }
   
@@ -241,11 +234,55 @@ button {
       background: linear-gradient(45deg, #fff, #ddd);
     }
   }
-  @keyframes logo-hover {
-    20% {
-      padding-right: 0em;
-    }
-    100% {
-      padding-right: 5em;
-    }
-  }
+
+
+.title {
+  margin-top: 0px;
+  margin-left: 30px;
+  color: azure;
+}
+
+/* Popup */
+body.active-modal {
+  overflow-y: hidden;
+}
+
+.btn-modal {
+  padding: 10px 20px;
+  display: block;
+  margin: 100px auto 0;
+  font-size: 18px;
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  position: fixed;
+  background-color: #cd0000;
+  z-index: 0;
+}
+
+.overlay {
+  background: rgba(49,49,49,0.8);
+}
+.modal-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #f1f1f1;
+  padding: 14px 28px;
+  border-radius: 3px;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 7px;
+}
