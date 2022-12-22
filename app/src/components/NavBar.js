@@ -1,10 +1,16 @@
-import React from 'react'
+import React,{useRef} from 'react'
 import {Link} from 'react-scroll'
 
 export default function NavBar() {
+    let clicked=true;
+    const navRef=useRef();  
+    const showNavBar=()=>{
+        clicked?navRef.current.style.height="auto":navRef.current.style.height="4em";
+        clicked=!clicked;
+    }
     return (
         <header id='nav-wrapper'>
-            <nav id='nav'>
+            <nav ref={navRef} id='nav'>
                 <div className='nav left'>
                     <span className='gradient skew'>
                         <h1 className='title un-skew'>
@@ -14,44 +20,44 @@ export default function NavBar() {
                             U.N.R.M.I
                         </h1>
                     </span>
-                    <button id='menu' className='btn-nav'>
+                    <button id='menu' className='btn-nav un-skew' onClick={showNavBar}>
                         <span className='fas fa-bars'></span>
                     </button>
                 </div>
 
                 <div className='nav right'>
-                    <Link className='nav-link active' to='home' spy={true} smooth={true} offset={0} duration={100}>
+                    <Link className='nav-link' to='home' spy={true} smooth={true} offset={0} duration={100}>
                         <span className='nav-link-span'>
                             <span className='u-nav'>
-                                Home
+                                Acasă
                             </span>    
                         </span> 
                     </Link>
-                    <Link className='nav-link' to='about' spy={true} smooth={true} offset={-50} duration={100}>
+                    <Link className='nav-link' to='about' spy={true} smooth={true} offset={0} duration={100}>
                         <span className='nav-link-span'>
                             <span className='u-nav'>
-                                About
+                                Despre noi
                             </span>    
                         </span> 
                     </Link>
                     <Link className='nav-link' to='donate' spy={true} smooth={true} offset={0} duration={100}>
                         <span className='nav-link-span'>
                             <span className='u-nav'>
-                                Learn more or donate
+                                Donează
                             </span>    
                         </span> 
                     </Link>
-                    <Link className='nav-link' to='contact' spy={true} smooth={true} offset={-30} duration={100}>
+                    <Link className='nav-link' to='contact' spy={true} smooth={true} offset={0} duration={100}>
                         <span className='nav-link-span'>
                             <span className='u-nav'>
-                                Register
+                                Înscrie-te
                             </span>    
                         </span> 
                     </Link>
-                    <Link className='nav-link' to='footer' spy={true} smooth={true} offset={-20} duration={100}>
+                    <Link className='nav-link' to='footer' spy={true} smooth={true} offset={0} duration={100}>
                         <span className='nav-link-span'>
                             <span className='u-nav'>
-                                Contact Us
+                                Contact
                             </span>    
                         </span> 
                     </Link>
