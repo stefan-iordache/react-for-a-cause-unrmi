@@ -10,6 +10,9 @@ export default function NavBar() {
                         <h1 className='title un-skew'>
                             Uniunea Naţională a Restauratorilor de Monumente Istorice
                         </h1>   
+                        <h1 className='title-short un-skew'>
+                            U.N.R.M.I
+                        </h1>
                     </span>
                     <button id='menu' className='btn-nav'>
                         <span className='fas fa-bars'></span>

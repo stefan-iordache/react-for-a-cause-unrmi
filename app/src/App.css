@@ -14,6 +14,7 @@ h2,h4 {
   display:flex;
   flex-wrap: wrap;
   align-items: center;
+
   justify-content: center;
 }
 
@@ -222,12 +223,37 @@ img.active {
     padding-left: 2em;
     padding-right: 2em;
   }
+  .title{display:none}
+  @media only screen and (max-width: 700px) {
+    #about{
+      height:120vh;
+    }
+   #donate {
+
+      height:120vh;
+    }
+    .image{
+      width:50vw;
+    }
+    #footer{
+      height:120vh;
+    }
+    .main div{
+      width: 100vw;  
+    } 
+  }
+  @media only screen and (min-width: 1400px) {
+    .title{display:contents}
+  }
   
-  @media (min-width: 800px) {
+  @media only screen and (min-width: 900px) {
+
+
+
     #nav-wrapper {
       overflow: hidden;
     }
-  
+
     #nav {
       overflow: hidden;
       flex-direction: row;
@@ -279,7 +305,7 @@ img.active {
   }
 
 
-.title {
+.title,.title-short {
   margin-top: 0px;
   margin-left: 30px;
   color: azure;

@@ -29,7 +29,7 @@ export default function Footer() {
                         Str.Zamorei nr. 1 Buşteni, BUŞTENI, JUD.PRAHOVA
                     </a>
             </div>
-            <div className="text-right  text">
+            <div className="text-right text">
             <ul>
                 <li style={{fontWeight:"bold"}}>Secretariat :</li>
                 <li> Tel/Fax: 0244525703</li>
