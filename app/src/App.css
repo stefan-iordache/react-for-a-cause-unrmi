@@ -283,6 +283,7 @@ img.active {
   margin-top: 0px;
   margin-left: 30px;
   color: azure;
+  font-family:  'Railway', sans-serif;;
 }
 
 /* Popup */
@@ -291,10 +292,13 @@ body.active-modal {
 }
 
 .btn-modal {
-  padding: 10px 20px;
+  padding: 15px 20px;
   display: block;
-  margin: 100px auto 0;
-  font-size: 18px;
+  margin: 40px auto 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  
 }
 
 .modal {
@@ -313,22 +317,23 @@ body.active-modal {
 }
 .modal-content {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   line-height: 1.4;
   background: #f1f1f1;
   padding: 14px 28px;
-  border-radius: 3px;
+  border-radius: 10px;
   max-width: 600px;
   min-width: 300px;
 }
 
-.close-modal {
+.modal-content .close-modal {
   position: absolute;
   top: 10px;
   right: 10px;
   padding: 5px 7px;
+  border: none;
 }
 
 .message-form {
@@ -346,6 +351,7 @@ body.active-modal {
 
 .errorForm {
   color:#cd0000;
+  font-weight: bold;
 }
 
 .message-form  textarea{
@@ -358,4 +364,37 @@ body.active-modal {
   font-family: 'Raleway', sans-serif;
   text-align:start;
   font-size: 12px;
+}
+
+#donate .donation-modal {
+  background-color: #FB8500;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.send-donation {
+  position: absolute;
+  background-color: #990000;
+  color: white;
+  border: none;
+  padding: 5px 7px;
+  border-radius: 10px;
+  font-size: 20px;
+  right: 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.donation-modal:hover, .btn-modal:hover, .send-donation:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  transition: 1s all;   
+}
+
+.donation-paragraph {
+  font-size: 22px;
 }
