@@ -13,17 +13,17 @@ function LandingPage() {
     const images = [
         {
             src: image10,
-            className: imageClass(0, index),
+            className: imageClass(0, index) + " slider-img",
             alt: "Ateneul Roman"
         },
         {
             src: image11,
-            className: imageClass(1, index),
+            className: imageClass(1, index) + " slider-img",
             alt: "Institutul Ion Mincu"
         },
         {
             src: image12,
-            className: imageClass(2, index),
+            className: imageClass(2, index) + " slider-img",
             alt: "Palatul Culturii din Ploiesti"
         }
     ]
@@ -34,13 +34,13 @@ function LandingPage() {
 
     return (
         <>
-            <div id='home' className='slider'>    
+            <section id='home' className='slider'>    
                 {
                     images.map((img, idx) => (
                         <img key={idx} src={img.src} className={img.className} alt={img.alt} />
                     ))
                 }
-            </div>
+            </section>
         </>
     )
 }

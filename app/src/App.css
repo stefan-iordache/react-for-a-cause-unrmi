@@ -1,9 +1,75 @@
+p,li {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+h2,h4 {
+  font-family: 'Martian Mono', monospace;
+  line-height: 50px;
+  letter-spacing: -0.1em;
+}
+
+.main{
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-left{
+  width:50vw;
+  color: black;
+  line-height: 30px;
+  font-size: 1.5em;
+  text-align: center;
+}
+.text-right{
+  width:40vw;
+  color: black;
+  line-height: 40px;
+  font-size: 2em;
+  text-align: center;
+  
+}
+.image{
+  width:23vw;
+}
+.text-inline{
+  color: #000000bf;
+  line-height: 25px;
+  font-size: 2em;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.text{
+  color: #8c8c8c;
+  line-height: 25px;
+  font-size: 1.5em;
+}
+
+.text h2{
+  color: #ffffff;
+  line-height: 25px;
+  font-size: 1.2em;
+}
+
+.adressLink{
+    color:#8c8c8c;
+}
+ul {  
+    list-style-type: none;  
+}
+
+
 .slider {
     position: relative;
 }
 
-img {
-  width: 100vw;
+.slider-img {
+  width: 99vw;
   height: 100vh;
   position: absolute;
   animation: fadeout 500ms forwards;
@@ -25,18 +91,6 @@ img.active {
 }
 
 /*-------------Reset-------------*/
-button {
-    background: none;
-    box-shadow: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:focus,
-  input:focus {
-    outline: 0;
-  }
-  
   html {
     scroll-behavior: smooth;
   }
@@ -50,31 +104,28 @@ button {
   
   section {
     height: 100vh;
+    width: 99.6vw;
   }
   
   #home {
-    height: 100vh;
-
-    background-color: #1c1c1c;
+    background-color: #FB8500;
   }
   
   #about {
+    background-color: #FB8500;
     height: 100vh;
-    background-color: #1c1c1c;
   }
   
   #donate {
+    background-color: white;
     height: 100vh;
-    background-color: #1c1c1c;
   }
   
   #contact {
-    height: 100vh;
-    background-color: azure;
+    background-color: #FB8500;
   }
  
   #footer {
-    height: 100vh;
     background-color: #1c1c1c;
   }
   
@@ -148,7 +199,7 @@ button {
     color: #fff;
   }
   
-  h1.logo a, a:active, a:hover, a:visited {
+  h1.logo {
     text-decoration: none;
     color: #fff;
   }
@@ -158,15 +209,7 @@ button {
     text-align: center;
     border-top: 0.5px solid #ddd;
   }
-  
-  a:link, a:visited, a:active {
-    text-decoration: none;
-    color: #990000;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
+
   
   .right {
     display: flex;
@@ -260,8 +303,9 @@ body.active-modal {
   left: 0;
   top: 0;
   position: fixed;
-  background-color: #cd0000;
+  background-color: #00000033;
   z-index: 0;
+  font-family: 'Oswald', sans-serif;
 }
 
 .overlay {
@@ -285,4 +329,33 @@ body.active-modal {
   top: 10px;
   right: 10px;
   padding: 5px 7px;
+}
+
+.message-form {
+  width: 50%;
+  border: 3px solid rgb(0, 0, 0);
+  padding-left: 30px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.message-form input {
+  width: 80%;
+  padding: 3px;
+  margin: 0px 0;
+}
+
+.errorForm {
+  color:#cd0000;
+}
+
+.message-form  textarea{
+  resize: none;
+  width: 80.6%;
+  height: 50px;
+}
+
+.footer-main{
+  font-family: 'Raleway', sans-serif;
+  text-align:start;
+  font-size: 12px;
 }

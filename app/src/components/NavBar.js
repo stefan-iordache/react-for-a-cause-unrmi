@@ -24,28 +24,28 @@ export default function NavBar() {
                             </span>    
                         </span> 
                     </Link>
-                    <Link className='nav-link' to='about' spy={true} smooth={true} offset={0} duration={500}>
+                    <Link className='nav-link' to='about' spy={true} smooth={true} offset={-50} duration={500}>
                         <span className='nav-link-span'>
                             <span className='u-nav'>
                                 About
                             </span>    
                         </span> 
                     </Link>
-                    <Link className='nav-link' to='donate' spy={true} smooth={true} offset={0} duration={500}>
+                    <Link className='nav-link' to='donate' spy={true} smooth={true} offset={-25} duration={500}>
                         <span className='nav-link-span'>
                             <span className='u-nav'>
                                 Learn more or donate
                             </span>    
                         </span> 
                     </Link>
-                    <Link className='nav-link' to='contact' spy={true} smooth={true} offset={0} duration={500}>
+                    <Link className='nav-link' to='contact' spy={true} smooth={true} offset={-30} duration={500}>
                         <span className='nav-link-span'>
                             <span className='u-nav'>
                                 Register
                             </span>    
                         </span> 
                     </Link>
-                    <Link className='nav-link' to='footer' spy={true} smooth={true} offset={0   } duration={500}>
+                    <Link className='nav-link' to='footer' spy={true} smooth={true} offset={-20} duration={500}>
                         <span className='nav-link-span'>
                             <span className='u-nav'>
                                 Contact Us
