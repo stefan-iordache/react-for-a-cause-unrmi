@@ -17,7 +17,7 @@ export default function NavBar() {
                             Uniunea Naţională a Restauratorilor de Monumente Istorice
                         </h1>   
                         <h1 className='title-short un-skew'>
-                            U.N.R.M.I
+                            U.N.R.M.I.
                         </h1>
                     </span>
                     <button id='menu' className='btn-nav un-skew' onClick={showNavBar}>

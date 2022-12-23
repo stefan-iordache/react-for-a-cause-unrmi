@@ -14,6 +14,7 @@ export default function Donate() {
         name: "",
         expirationDate: "",
         cvv: "",
+        amount: ""
     }
 
     function handleSubmit(event) {
@@ -21,13 +22,15 @@ export default function Donate() {
         if (event.target[0].value &&
             event.target[1].value &&
             event.target[2].value &&
-            event.target[3].value
+            event.target[3].value &&
+            event.target[4].value
             ) {
                 setDonateError(false)
                 form.cardNumber = event.target[0].value
                 form.name = event.target[1].value
                 form.expirationDate = event.target[2].value
                 form.cvv = event.target[3].value
+                form.amount = event.target[3].value
                 console.log(form);
             } else {setDonateError(true)}
     }
@@ -71,8 +74,15 @@ export default function Donate() {
                                 CVV:
                                 <br/>
                                 <input type="text" name="text" />
+                                </label>
+                                <br/>
+                            <label className='donation-paragraph'>
+                                Amount:
+                                <br/>
+                                <input type="text" name="text" />
                             <button className='send-donation'>Doneaza</button>
-                            </label>
+                            <br/>
+                                </label>
                             <button className='close-modal' onClick={donateEvent}>Inchide</button>
                             {donateError && (
                                 <>

@@ -149,9 +149,7 @@ img.active {
     left: 0;
     z-index: 100;
   }
-  .nav-small-screen{
-    height: auto;
-  }
+
   #nav {
     background-color: #fff;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
@@ -269,6 +267,7 @@ img.active {
     }
   
     .nav-link {
+      cursor: pointer;
       border-top: none;
     }
   
