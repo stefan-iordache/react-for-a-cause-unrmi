@@ -14,7 +14,6 @@ h2,h4 {
   display:flex;
   flex-wrap: wrap;
   align-items: center;
-
   justify-content: center;
 }
 
@@ -31,11 +30,16 @@ h2,h4 {
   line-height: 40px;
   font-size: 2em;
   text-align: center;
-  
 }
 .image{
   width:23vw;
 }
+
+#awards-img {
+  width: 22vw;
+  margin-top: 12.5vh;
+}
+
 .text-inline{
   color: #000000bf;
   line-height: 25px;
@@ -70,7 +74,7 @@ ul {
 }
 
 .slider-img {
-  width: 99vw;
+  width: 100%;
   height: 100vh;
   position: absolute;
   animation: fadeout 500ms forwards;
@@ -105,7 +109,7 @@ img.active {
   
   section {
     height: 100vh;
-    width: 99.6vw;
+    width: 100%;
   }
   
   #home {
@@ -115,6 +119,7 @@ img.active {
   #about {
     background-color: #FB8500;
     height: 100vh;
+    font-size: 2 vw;
   }
   
   #donate {
@@ -244,7 +249,7 @@ img.active {
       height:120vh;
     }
     .main div{
-      width: 100vw;  
+      width: 100%;  
     } 
 
   }
@@ -254,9 +259,6 @@ img.active {
   }
   
   @media only screen and (min-width: 800px) {
-
-
-
     #nav-wrapper {
       overflow: hidden;
     }
@@ -276,7 +278,6 @@ img.active {
       flex-direction: row;
       justify-content: flex-end;
       position: relative;
-      left: 1.5em;
       height: auto;
     }
   
@@ -337,7 +338,7 @@ body.active-modal {
 }
 
 .modal {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   left: 0;
   top: 0;
@@ -433,12 +434,3 @@ button {
 .donation-paragraph {
   font-size: 22px;
 }
-
-/* @keyframes logo-hover {
-  20% {
-    padding-right: 0em;
-  }
-  100% {
-    padding-right: 5em;
-  }
-} */

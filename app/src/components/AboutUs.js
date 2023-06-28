@@ -12,7 +12,7 @@ Uniunea Naţională a Restauratorilor de Monumente Istorice, înfinţată în an
 </p> 
             </div>
             <div className="text-right">
-                <img src={image10} alt="unrmi awardas" className="image"></img>
+                <img src={image10} alt="unrmi awards" className="image" id='awards-img'></img>
             </div>
             </section>
         </>

@@ -62,7 +62,6 @@ export default function NavBar() {
                         </span> 
                     </Link>
                 </div>
-                
             </nav>
         </header>
     )
